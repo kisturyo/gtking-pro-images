@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         DEVICE: [gtking-pro]
-        EDITION: [gnome,kde-plasma,mate,minimal,sway,xfce]
+        EDITION: [minimal]
         BRANCH: [stable]
     steps:
       -
@@ -42,7 +42,4 @@ jobs:
           prerelease: false
           files: |
             ${{ env.FILE_PATH }}
-            ${{ env.FILE_SHA1 }}
-            ${{ env.FILE_TORRENT }}
             ${{ env.FILE_PKG }}
-            #${{ env.FILE_SIG }}
